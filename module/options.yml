@@ -1,0 +1,91 @@
+options:
+- display: GroupBox
+  category: [Lord Hunt]
+  header: '{{hiding_group}}'
+  text: '{{hiding_group_descr}}'
+  hasHeader: true
+  children:
+  - url: lord-hunt.hiding.enabled
+    name: lord-hunt-hiding-enabled
+    text: '{{hiding_enabled}}'
+    tooltip: '{{hiding_enabled_tooltip}}'
+    display: Switch
+    contents:
+      type: boolean
+      value: true
+  - url: lord-hunt.hiding.siege
+    name: lord-hunt-hiding-siege
+    text: '{{hiding_siege}}'
+    tooltip: '{{hiding_siege_tooltip}}'
+    display: Choice
+    contents:
+      type: string
+      value: hiding
+      choices:
+      - name: hiding
+        text: '{{hiding_siege_hiding}}'
+      - name: home
+        text: '{{hiding_siege_home}}'
+  - url: lord-hunt.hiding.split
+    name: lord-hunt-hiding-split
+    text: '{{hiding_split}}'
+    tooltip: '{{hiding_split_tooltip}}'
+    display: Number
+    contents:
+      type: integer
+      value: 50
+      min: 0
+      max: 100
+      step: 5
+  - url: lord-hunt.hiding.switch_alive
+    name: lord-hunt-hiding-switch-alive
+    text: '{{hiding_switch_alive}}'
+    tooltip: '{{hiding_switch_alive_tooltip}}'
+    display: Number
+    contents:
+      type: integer
+      value: 80
+      min: 0
+      max: 100
+      step: 5
+
+- display: GroupBox
+  category: [Lord Hunt]
+  header: '{{hunt_group}}'
+  text: '{{hunt_group_descr}}'
+  hasHeader: true
+  children:
+  - url: lord-hunt.hunt.enabled
+    name: lord-hunt-hunt-enabled
+    text: '{{hunt_enabled}}'
+    tooltip: '{{hunt_enabled_tooltip}}'
+    display: Switch
+    contents:
+      type: boolean
+      value: true
+  - url: lord-hunt.hunt.share
+    name: lord-hunt-hunt-share
+    text: '{{hunt_share}}'
+    tooltip: '{{hunt_share_tooltip}}'
+    display: Number
+    contents:
+      type: integer
+      value: 50
+      min: 5
+      max: 100
+      step: 5
+
+- display: GroupBox
+  category: [Lord Hunt]
+  header: '{{diagnostics_group}}'
+  text: '{{diagnostics_group_descr}}'
+  hasHeader: true
+  children:
+  - url: lord-hunt.diagnostics.log
+    name: lord-hunt-diagnostics-log
+    text: '{{diagnostics_log}}'
+    tooltip: '{{diagnostics_log_tooltip}}'
+    display: Switch
+    contents:
+      type: boolean
+      value: false
