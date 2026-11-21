@@ -43,3 +43,16 @@ What the module does, in plain English, is in `module/locale/description-en.md`.
   AI's troops, and the next check picks again.
 * **Other modules** can ask `modules["lord-hunt"]:isHunter(unitId)`, `:isSplit(unitId)` and
   `:pause(true/false)`.
+
+## Per-character AIC settings
+
+Add these integer fields under an AI character's existing `Personality` section for AIC
+Loader 1.1.1 or later in the 1.x series. Omitted fields use the values in Customizations.
+The global hunt and hiding switches still govern their respective features.
+
+| AIC field | Values |
+| --- | --- |
+| `AttLordHuntShare` | Initial share sent after the lord, 0–100%. Zero disables hunting for the character. |
+| `AttRedirectHidingSplit` | Share sent to the castle without the main siege, 0–100%. Zero sends the whole army to the hiding castle. |
+| `AttRedirectHidingSwitchAlive` | Minimum surviving share required to switch targets mid-attack, 0–100%. |
+| `AttRedirectHidingSiege` | 0 sends the main siege to the original castle, 1 to the hiding castle. Applies when a split is possible. |
