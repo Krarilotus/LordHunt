@@ -219,6 +219,46 @@ local function diag(fmt, ...)
 end
 
 local function player(p) return G.players + p * P.STRIDE end
+
+local valuesByAI = {}
+local AIC_OPTIONS = {
+  AttLordHuntShare = { default = function() return O.huntShare end, min = 0, max = 100 },
+  AttRedirectHidingSplit = { default = function() return O.split end, min = 0, max = 100 },
+  AttRedirectHidingSwitchAlive = { default = function() return O.switchAlive end, min = 0, max = 100 },
+  AttRedirectHidingSiege = { default = function() return O.siegeOnHiding and 1 or 0 end, min = 0, max = 1 },
+}
+
+local function aicOption(playerID, name)
+  local character = rd32(player(playerID) + P.AI_TYPE)
+  local values = valuesByAI[character]
+  local value = values and values[name]
+  if value ~= nil then return value end
+  return AIC_OPTIONS[name].default()
+end
+
+local function registerAICOptions()
+  for name, spec in pairs(AIC_OPTIONS) do
+    modules.aicloader:setAdditionalAICValue(name, function(character, value)
+      if value == nil then
+        local values = valuesByAI[character]
+        if values and values[name] ~= nil then return values[name] end
+        return spec.default()
+      end
+      local integer = type(value) == "number" and math.tointeger(value)
+      if not integer or integer < spec.min or integer > spec.max then
+        log(WARNING, string.format("%s: %s must be an integer from %d to %d",
+          MODULE_NAME, name, spec.min, spec.max))
+        return
+      end
+      local values = valuesByAI[character] or {}
+      values[name] = integer
+      valuesByAI[character] = values
+    end, function(character)
+      if valuesByAI[character] then valuesByAI[character][name] = nil end
+    end)
+  end
+end
+
 local function unit(id) return G.units + id * U.STRIDE end
 local function tribe(id) return G.tribes + id * G.tribeStride end
 local function building(id) return G.buildings + id * B.STRIDE end
@@ -431,12 +471,12 @@ local function checkHiding(a, S, army, lord, memo, state)
   end
   if host == nil then return end
   if anyReaches(memo, a, army.main, lordArea) then return end    -- not hidden: the hunt's job
-  if state >= 3 and army.attack * 100 < S.peak * O.switchAlive then return end
+  if state >= 3 and army.attack * 100 < S.peak * aicOption(a, "AttRedirectHidingSwitchAlive") then return end
 
   local homeHasStuff = army.home > 0 and rd32(player(h) + P.TARGETABLE_COUNT) > 0
-  local share = homeHasStuff and O.split or 0
+  local share = homeHasStuff and aicOption(a, "AttRedirectHidingSplit") or 0
   local splitTo
-  if O.siegeOnHiding or share == 0 then
+  if aicOption(a, "AttRedirectHidingSiege") == 1 or share == 0 then
     wr32(player(a) + P.ATTACKED, host)
     wr32(G.override + a * 4, host)          -- the AI's monthly target choice keeps it
     wr32(player(a) + P.AI_STATE, 1)          -- the AI plans its attack again, on the new castle
@@ -627,7 +667,7 @@ local function startHunt(a, S, group, source, lord, lordArea, memo, wave, tick)
   if #reachable == 0 then return end
   local n = #reachable
   if wave == 1 then
-    n = (candidates * O.huntShare + 99) // 100
+    n = (candidates * aicOption(a, "AttLordHuntShare") + 99) // 100
     if n > #reachable then n = #reachable end
   end
   table.sort(reachable, function(l, r)
@@ -803,8 +843,11 @@ local function update(a)
     checkHiding(a, S, army, lord, memo, state)
   end
   orderSplit(a, S, army, memo)
-  if O.hunt then
+  if O.hunt and aicOption(a, "AttLordHuntShare") > 0 then
     huntLord(a, S, army, lord, memo, tick)
+  elseif S.hunt ~= nil then
+    releaseHunt(a, S, army.hunt, "hunting disabled for this character")
+    S.hunt = nil
   end
 end
 
@@ -917,7 +960,6 @@ local function enable(self, config)
   O.switchAlive = percent(setting(config, "hiding", "switch_alive"))
   O.hunt = setting(config, "hunt", "enabled") == true
   O.huntShare = percent(setting(config, "hunt", "share"))
-  if O.huntShare == 0 then O.hunt = false end
   O.log = setting(config, "diagnostics", "log") == true
   if not O.hiding and not O.hunt then
     log(INFO, MODULE_NAME .. ": both parts are off")
@@ -929,6 +971,8 @@ local function enable(self, config)
     log(WARNING, tostring(problem))
     return
   end
+
+  registerAICOptions()
 
   local slots = core.allocate(8, true)
   local pad = core.allocateCode({ 0x90, 0x90, 0x90, 0x90, 0x90, 0xC3 })
@@ -964,6 +1008,12 @@ local function enable(self, config)
 end
 
 local function disable(self, config)
+  if self.saved ~= nil then
+    for name in pairs(AIC_OPTIONS) do
+      modules.aicloader:setAdditionalAICValue(name, nil)
+    end
+    valuesByAI = {}
+  end
   if self.saved ~= nil then
     for _, saved in ipairs(self.saved) do core.writeCode(saved.address, saved.bytes) end
     self.saved = nil
