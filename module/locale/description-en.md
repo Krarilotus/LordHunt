@@ -1,7 +1,7 @@
 # Lord Hunt
 
 **Author**: Monsterfish
-**Version**: 1.0.2
+**Version**: 1.0.3
 
 Stops you hiding your lord from the AI. Every part can be switched off in the settings.
 
