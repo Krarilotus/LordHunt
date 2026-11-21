@@ -1,34 +1,49 @@
 ai: KI
 diagnostics_group: Diagnose
-diagnostics_group_descr: Für die Fehlersuche in ucp3.log.
-diagnostics_log: Entscheidungen protokollieren
-diagnostics_log_details: Standardmäßig aus.
-hiding_enabled: Zufluchtsburg angreifen
-hiding_enabled_details: Standardmäßig an.
-hiding_group: Zuflucht in einer verbündeten Burg
-hiding_group_details: 'Versteckt sich ein menschlicher Burgherr bei einem Verbündeten, kann die KI ihre Belagerung verlagern.
+diagnostics_group_descr: Für Tests und Fehlersuche.
+diagnostics_log: Entscheidungen der Angreifer protokollieren
+diagnostics_log_details: |-
+  Schreibt eine Zeile in ucp3.log, sobald ein Angriff auf eine andere Burg umgelenkt wird, Truppen sich abspalten oder Verfolger losziehen bzw. zurückkehren.
 
+  Standardmäßig deaktiviert.
+hiding_enabled: Die Burg angreifen, in der sich dein Lord versteckt
+hiding_enabled_details: |-
+  Befindet sich dein Lord außerhalb deiner eigenen Mauern und innerhalb der Mauern einer verbündeten Burg, in die die Angreifer nicht einfach hineinmarschieren können, wird der Angriff auf diese Burg gelenkt. Ein Teil der Armee greift weiterhin deine eigene Burg an, sofern dort noch Bewohner und Gebäude sind; andernfalls zieht die gesamte Armee gegen die Burg, in der sich dein Lord aufhält.
 
-  Ziel der Hauptbelagerung — Standardwert: Zufluchtsburg. Der Wert gilt, wenn die KI-Persönlichkeit keinen eigenen Wert vorgibt.
+  Standardmäßig aktiviert.
+hiding_group: Lord versteckt sich in einer verbündeten Burg
+hiding_group_details: |-
+  Greift dich eine KI an, während dein Lord in einer verbündeten Burg sitzt, geht die KI auch gegen diese Burg vor, statt nur deine leere Heimatburg zu belagern.
 
+  Ziel der vollen Belagerung — Die KI kann immer nur eine vollständige Belagerung gleichzeitig planen (Belagerungslager, Baumeister, Leitern, Grabenausheben). Hier wird festgelegt, welche Burg sie trifft. Die andere Burg wird von den abgespaltenen Truppen auf eigene Faust angegriffen: Sie greifen das nächste erreichbare Gebäude an, dann das übernächste, und schlagen auf Mauern ein, wenn nichts anderes erreichbar ist. Ihre Bogenschützen und Armbrustschützen ziehen mit und schießen auf gegnerische Truppen unterwegs.
 
-  Truppen für die zweite Burg (%) — Standardwert: 50. Der Wert gilt, wenn die KI-Persönlichkeit keinen eigenen Wert vorgibt.
+  Standard: Die Burg, in der dein Lord ist. Gilt, wenn die KI-Persönlichkeit (AIC) keinen eigenen Wert vorgibt.
 
+  Anteil der Armee für die andere Burg (%) — Welcher Anteil der angreifenden Armee sich abspaltet, um die Burg anzugreifen, die nicht die volle Belagerung erhält. Belagerungsgeräte, Baumeister, Leiterträger und Tunnelgräber bleiben immer bei der Hauptbelagerung. Bei 0 zieht die gesamte Armee zu der Burg, in der dein Lord ist.
 
-  Mindeststärke für Zielwechsel (%) — Standardwert: 80. Der Wert gilt, wenn die KI-Persönlichkeit keinen eigenen Wert vorgibt.'
-hiding_siege: Ziel der Hauptbelagerung
-hiding_siege_hiding: Zufluchtsburg
-hiding_siege_home: Ursprüngliche Burg
-hiding_split: Truppen für die zweite Burg (%)
-hiding_switch_alive: Mindeststärke für Zielwechsel (%)
-hunt_enabled: Truppen zur Jagd entsenden
-hunt_enabled_details: Standardmäßig an.
-hunt_group: Jagd auf den Burgherrn
-hunt_group_details: 'Ist der Weg frei, greift ein Teil der Armee den Burgherrn direkt an.
+  Standard: 50. Gilt, wenn die KI-Persönlichkeit (AIC) keinen eigenen Wert vorgibt.
 
+  Mitten im Angriff nur wechseln, wenn mindestens so viel Armee übrig ist (%) — Schlüpft dein Lord während eines bereits laufenden Angriffs in eine verbündete Burg, wechseln die Angreifer nur dann das Ziel, wenn noch mindestens dieser Anteil ihrer ursprünglichen Truppen lebt. Eine halb geschlagene Armee greift ihr bisheriges Ziel weiter an.
 
-  Truppenanteil für die Jagd (%) — Standardwert: 50. Der Wert gilt, wenn die KI-Persönlichkeit keinen eigenen Wert vorgibt.'
-hunt_share: Truppenanteil für die Jagd (%)
+  Standard: 80. Gilt, wenn die KI-Persönlichkeit (AIC) keinen eigenen Wert vorgibt.
+hiding_siege: Ziel der vollen Belagerung
+hiding_siege_hiding: Die Burg, in der dein Lord ist
+hiding_siege_home: Deine eigene Burg
+hiding_split: Anteil der Armee für die andere Burg (%)
+hiding_switch_alive: Mitten im Angriff nur wechseln, wenn mindestens so viel Armee übrig ist (%)
+hunt_enabled: Truppen direkt auf den Lord ansetzen
+hunt_enabled_details: |-
+  Als Verfolger rücken zuerst die Truppen der Hauptarmee aus, die deinem Lord am nächsten stehen, danach die übrigen Angriffstruppen. Fallen alle Verfolger, geht der Rest dieser Armee auf den Lord los. Wird der Weg zu ihm wieder verschlossen (etwa durch eine reparierte Mauer), kehren die Verfolger zur Belagerung zurück. Wann sich die KI zurückzieht, entscheidet sie weiterhin genauso wie bisher.
+
+  Standardmäßig aktiviert.
+hunt_group: Jagd auf den Lord
+hunt_group_details: |-
+  Sobald die Angreifer einen offenen Weg zu deinem Lord haben – durch eine zerstörte Mauer oder ein Torhaus, eine Leiter, einen Belagerungsturm, einen eingestürzten Tunnel oder weil er im Freien steht –, stürmt ein Teil von ihnen direkt auf ihn zu, während der Rest die Belagerung fortsetzt.
+
+  Anteil der Armee für die Jagd auf den Lord (%) — Welcher Teil der Armee, die die Burg deines Lords angreift, ihn direkt jagt. Belagerungsgeräte, Baumeister, Leiterträger und Tunnelgräber beteiligen sich daran nie.
+
+  Standard: 50. Gilt, wenn die KI-Persönlichkeit (AIC) keinen eigenen Wert vorgibt.
+hunt_share: Anteil der Armee für die Jagd auf den Lord (%)
 improvements: Verbesserungen
 misc: Sonstiges
 tags.behavior: Verhalten

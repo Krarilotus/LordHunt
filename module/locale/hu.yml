@@ -1,34 +1,49 @@
 ai: MI
 diagnostics_group: Diagnosztika
-diagnostics_group_descr: Hibakereséshez az ucp3.log fájlban.
-diagnostics_log: Döntések naplózása
-diagnostics_log_details: Alapértelmezésben ki van kapcsolva.
-hiding_enabled: A menedéket adó vár támadása
-hiding_enabled_details: Alapértelmezésben be van kapcsolva.
-hiding_group: Menedék egy szövetséges várában
-hiding_group_details: 'Ha az emberi várúr egy szövetségeshez menekül, az MI áthelyezheti az ostromot.
+diagnostics_group_descr: Teszteléshez.
+diagnostics_log: A támadók döntéseinek naplózása
+diagnostics_log_details: |-
+  Sort ír a ucp3.log fájlba, amikor egy támadás másik várra irányul, csapatok válnak le, vagy a vadászok elindulnak illetve visszatérnek.
 
+  Alapértelmezés szerint kikapcsolva.
+hiding_enabled: A lordodat rejtő vár megtámadása
+hiding_enabled_details: |-
+  Ha a lordod a saját falaidon kívül, de egy szövetséges vár falain belül tartózkodik, ahová a támadók nem tudnak besétálni, a támadás arra a várra irányul. A sereg egy része továbbra is a saját váradat támadja, ha még vannak ott embereid és épületeid; különben az egész sereg a lordodat rejtő vár ellen vonul.
 
-  A fő ostrom célpontja — Alapérték: Menedéket adó vár. Ez az érték érvényes, ha az MI személyisége nem ad meg másikat.
+  Alapértelmezés szerint bekapcsolva.
+hiding_group: Szövetséges várban rejtőző lord
+hiding_group_details: |-
+  Amikor egy MI megtámad, miközben a lordod egy szövetséges várában ül, az MI azt a várat is célba veszi ahelyett, hogy csak az üres otthonodat ostromolná.
 
+  A teljes ostrom célpontja — Az MI egyszerre csak egy teljes ostromot tud megtervezni (ostromsátrak, mérnökök, létrák, árokbetemetés). Itt választható ki, melyik vár kapja ezt. A másik várat a leváló csapatok önállóan támadják: a legközelebbi elérhető épületet rombolják, majd a következőt, és ha semmi nem elérhető, a falakat támadják. Az íjászaik és számszeríjászaik velük mennek, és a szembejövő csapatokra lőnek.
 
-  Csapatok a második várhoz (%) — Alapérték: 50. Ez az érték érvényes, ha az MI személyisége nem ad meg másikat.
+  Alapértelmezett: A vár, amelyben a lordod van. Akkor érvényes, ha az MI személyisége (AIC) nem ad meg saját értéket.
 
+  A másik vár ellen küldött sereg aránya (%) — A támadó sereg mekkora része válik le a teljes ostromot nem kapó vár ellen. Az ostromgépek, mérnökök, létrahordozók és alagútásók mindig a fő ostromnál maradnak. A 0 az egész sereget a lordodat rejtő vár ellen küldi.
 
-  Célváltáshoz megmaradó haderő (%) — Alapérték: 80. Ez az érték érvényes, ha az MI személyisége nem ad meg másikat.'
-hiding_siege: A fő ostrom célpontja
-hiding_siege_hiding: Menedéket adó vár
-hiding_siege_home: Eredeti vár
-hiding_split: Csapatok a második várhoz (%)
-hiding_switch_alive: Célváltáshoz megmaradó haderő (%)
-hunt_enabled: Csapatok küldése a várúr után
-hunt_enabled_details: Alapértelmezésben be van kapcsolva.
-hunt_group: Várúrvadászat
-hunt_group_details: 'Ha szabad az út, a sereg egy része közvetlenül a várurat támadja.
+  Alapértelmezett: 50. Akkor érvényes, ha az MI személyisége (AIC) nem ad meg saját értéket.
 
+  Támadás közbeni célváltás csak ennyi megmaradt sereg esetén (%) — Ha a lordod már folyamatban lévő támadás közben bújik szövetséges várba, a támadók csak akkor váltanak célpontot, ha az elindult csapataik legalább ekkora része még él. Egy félig megtépázott sereg folytatja a megkezdett ostromot.
 
-  A vadászatra küldött sereg aránya (%) — Alapérték: 50. Ez az érték érvényes, ha az MI személyisége nem ad meg másikat.'
-hunt_share: A vadászatra küldött sereg aránya (%)
+  Alapértelmezett: 80. Akkor érvényes, ha az MI személyisége (AIC) nem ad meg saját értéket.
+hiding_siege: A teljes ostrom célpontja
+hiding_siege_hiding: A vár, amelyben a lordod van
+hiding_siege_home: A saját várad
+hiding_split: A másik vár ellen küldött sereg aránya (%)
+hiding_switch_alive: Támadás közbeni célváltás csak ennyi megmaradt sereg esetén (%)
+hunt_enabled: Csapatok küldése a lord után
+hunt_enabled_details: |-
+  Először a lordodhoz legközelebb álló fősereg-egységek indulnak vadászatra, majd a támadás többi csapata. Ha mind meghalnak, a sereg többi része is a lordra tör. Ha az út újra bezárul (megjavítod a falat), a vadászok visszatérnek az ostromhoz. A visszavonulásról továbbra is pontosan ugyanúgy dönt az MI.
+
+  Alapértelmezés szerint bekapcsolva.
+hunt_group: Vadászat a lordra
+hunt_group_details: |-
+  Amint a támadóknak szabad útjuk nyílik a lordodhoz — áttört falon vagy kapun, létrán, ostromtornyon, beomlott alagúton át, vagy mert a nyílt terepen áll —, egy részük azonnal rá ront, míg a többiek folytatják az ostromot.
+
+  A lordra vadászó sereg aránya (%) — A lordodat rejtő várat támadó sereg mekkora része indul utána. Az ostromgépek, mérnökök, létrahordozók és alagútásók soha nem vesznek részt ebben.
+
+  Alapértelmezett: 50. Akkor érvényes, ha az MI személyisége (AIC) nem ad meg saját értéket.
+hunt_share: A lordra vadászó sereg aránya (%)
 improvements: Fejlesztések
 misc: Egyéb
 tags.behavior: Viselkedés

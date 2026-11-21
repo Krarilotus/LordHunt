@@ -1,34 +1,49 @@
-ai: YZ
+ai: Yapay zekâ
 diagnostics_group: Tanılama
-diagnostics_group_descr: ucp3.log ile hata ayıklamak için.
-diagnostics_log: Kararları günlüğe yaz
-diagnostics_log_details: Varsayılan olarak kapalı.
-hiding_enabled: Sığınılan kaleye saldır
-hiding_enabled_details: Varsayılan olarak açık.
-hiding_group: Müttefik kalesine sığınma
-hiding_group_details: 'İnsan oyuncunun lordu müttefikine sığınırsa YZ kuşatmayı başka kaleye çevirebilir.
+diagnostics_group_descr: Test ve hata ayıklama için.
+diagnostics_log: Saldıranların kararlarını günlüğe yaz
+diagnostics_log_details: |-
+  Bir saldırı başka bir kaleye yönlendirildiğinde, birlikler ayrıldığında veya avcılar yola çıkıp döndüğünde ucp3.log dosyasına bir satır yazar.
 
+  Varsayılan olarak kapalı.
+hiding_enabled: Lordunun saklandığı kaleye saldır
+hiding_enabled_details: |-
+  Lordun kendi surlarının dışında ve saldıranların yürüyerek giremediği bir müttefik kalenin surları içindeyken saldırı o kaleye yönlendirilir. Kendi kalende hâlâ insanlar ve binalar varsa ordunun bir kısmı yine oraya saldırır; aksi hâlde tüm ordu lordunun bulunduğu kaleye gider.
 
-  Ana kuşatma hedefi — Varsayılan değer: Sığınılan kale. YZ karakterinde değer yoksa bu değer kullanılır.
+  Varsayılan olarak açık.
+hiding_group: Müttefik kalesinde saklanan lord
+hiding_group_details: |-
+  Bir yapay zekâ, lordun müttefik kalesindeyken sana saldırdığında yalnızca boş kaleni kuşatmak yerine o kaleye de yönelir.
 
+  Tam kuşatma hedefi — Yapay zekâ aynı anda yalnızca bir tam kuşatma planlayabilir (kuşatma çadırları, mühendisler, merdivenler, hendek doldurma). Bu ayar hangi kalenin tam kuşatma alacağını seçer. Diğer kaleye ayrılan birlikler kendi başına saldırır: ulaşabildikleri en yakın binayı, sonra bir sonrakini yıkarlar; ulaşacak bina kalmayınca surlara vururlar. Okçuları ve arbaletçileri de yanlarında yürüyüp karşılaştıkları birliklere ateş eder.
 
-  İkinci kaleye giden ordu (%) — Varsayılan değer: 50. YZ karakterinde değer yoksa bu değer kullanılır.
+  Varsayılan: Lordunun bulunduğu kale. Yapay zekâ kişiliği (AIC) kendi değerini belirtmediğinde kullanılır.
 
+  Diğer kaleye gönderilen ordu payı (%) — Tam kuşatmayı almayan kaleye saldırmak için ana ordudan ayrılan kısım. Kuşatma araçları, mühendisler, merdivenciler ve tünelciler her zaman ana kuşatmada kalır. 0 değeri tüm orduyu lordunun bulunduğu kaleye gönderir.
 
-  Hedef değiştirmek için kalan ordu (%) — Varsayılan değer: 80. YZ karakterinde değer yoksa bu değer kullanılır.'
-hiding_siege: Ana kuşatma hedefi
-hiding_siege_hiding: Sığınılan kale
-hiding_siege_home: Asıl kale
-hiding_split: İkinci kaleye giden ordu (%)
-hiding_switch_alive: Hedef değiştirmek için kalan ordu (%)
+  Varsayılan: 50. Yapay zekâ kişiliği (AIC) kendi değerini belirtmediğinde kullanılır.
+
+  Saldırı ortasında hedef değişimi için gereken en az kalan ordu (%) — Saldırı zaten başlamışken lordun bir müttefik kalesine girerse, saldıranlar yalnızca başlangıçtaki birliklerinin en az bu kadarı hayattaysa hedef değiştirir. Yarı yarıya erimiş bir ordu mevcut hedefine saldırmayı sürdürür.
+
+  Varsayılan: 80. Yapay zekâ kişiliği (AIC) kendi değerini belirtmediğinde kullanılır.
+hiding_siege: Tam kuşatma hedefi
+hiding_siege_hiding: Lordunun bulunduğu kale
+hiding_siege_home: Kendi kalen
+hiding_split: Diğer kaleye gönderilen ordu payı (%)
+hiding_switch_alive: Saldırı ortasında hedef değişimi için gereken en az kalan ordu (%)
 hunt_enabled: Lordun peşine birlik gönder
-hunt_enabled_details: Varsayılan olarak açık.
+hunt_enabled_details: |-
+  Avcılar önce ana ordunun lorduna en yakın birliklerinden, ardından saldırının diğer birliklerinden seçilir. Hepsi ölürse ordunun kalanı da lorda yönelir. Ona giden yol tekrar kapanırsa (sur onarılırsa) avcılar kuşatmaya döner. Yapay zekânın ne zaman geri çekileceği eskisiyle tamamen aynı kalır.
+
+  Varsayılan olarak açık.
 hunt_group: Lord avı
-hunt_group_details: 'Yol açıksa ordunun bir kısmı doğrudan lorda saldırır.
+hunt_group_details: |-
+  Saldıranların lorduna açık bir yolu olduğunda — yıkılmış bir sur veya kapı binası, merdiven, kuşatma kulesi, çökmüş tünel yoluyla ya da lord açık alanda durduğunda — bir kısmı doğrudan ona yönelir, geri kalanı kuşatmayı sürdürür.
 
+  Lordu avlayan ordu payı (%) — Lordunun bulunduğu kaleye saldıran ordunun ne kadarının onun peşine düşeceği. Kuşatma araçları, mühendisler, merdivenciler ve tünelciler buna asla katılmaz.
 
-  Ava gönderilen ordu (%) — Varsayılan değer: 50. YZ karakterinde değer yoksa bu değer kullanılır.'
-hunt_share: Ava gönderilen ordu (%)
+  Varsayılan: 50. Yapay zekâ kişiliği (AIC) kendi değerini belirtmediğinde kullanılır.
+hunt_share: Lordu avlayan ordu payı (%)
 improvements: İyileştirmeler
 misc: Diğer
 tags.behavior: Davranış

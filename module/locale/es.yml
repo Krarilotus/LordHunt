@@ -1,34 +1,49 @@
 ai: IA
 diagnostics_group: Diagnóstico
-diagnostics_group_descr: Para diagnosticar problemas en ucp3.log.
-diagnostics_log: Registrar decisiones
-diagnostics_log_details: Desactivado por defecto.
-hiding_enabled: Atacar el castillo refugio
-hiding_enabled_details: Activado por defecto.
-hiding_group: Refugio en un castillo aliado
-hiding_group_details: 'Si un lord humano se refugia con un aliado, la IA puede trasladar el asedio.
+diagnostics_group_descr: Para pruebas y depuración.
+diagnostics_log: Registrar en el log las decisiones de los atacantes
+diagnostics_log_details: |-
+  Escribe una línea en ucp3.log cada vez que un ataque se redirige a otro castillo, se dividen tropas o los perseguidores salen o regresan.
 
+  Desactivado por defecto.
+hiding_enabled: Atacar el castillo donde se esconde tu señor
+hiding_enabled_details: |-
+  Cuando tu señor está fuera de tus propios muros y dentro de los muros de un castillo aliado al que los atacantes no pueden entrar a pie, el ataque se redirige hacia ese castillo. Parte del ejército sigue atacando tu castillo si todavía tienes gente y edificios allí; de lo contrario, todo el ejército va a por el castillo donde está tu señor.
 
-  Objetivo del asedio principal — Valor predeterminado: Castillo refugio. Se usa este valor si la personalidad de la IA no define otro.
+  Activado por defecto.
+hiding_group: Señor escondido en un castillo aliado
+hiding_group_details: |-
+  Cuando una IA te ataca mientras tu señor se refugia en el castillo de un aliado, la IA también ataca ese castillo en lugar de asediar solo tu fortaleza vacía.
 
+  El asedio completo va a — La IA solo puede planificar un asedio completo a la vez (campamentos de asedio, ingenieros, escaleras, relleno de fosos). Esto elige qué castillo lo recibe. El otro castillo es atacado por las tropas separadas por su cuenta: atacan el edificio alcanzable más cercano, luego el siguiente, y golpean los muros si no hay ninguno al alcance. Sus arqueros y ballesteros avanzan con ellas y disparan a las tropas que encuentran.
 
-  Tropas para el segundo castillo (%) — Valor predeterminado: 50. Se usa este valor si la personalidad de la IA no define otro.
+  Predeterminado: El castillo donde está tu señor. Se usa cuando la personalidad de la IA (AIC) no indica un valor propio.
 
+  Proporción del ejército enviada al otro castillo (%) — Qué porcentaje del ejército atacante se separa para atacar el castillo que no recibe el asedio completo. Las máquinas de asedio, ingenieros, escaladores y zapadores se quedan siempre con el asedio principal. 0 envía todo el ejército al castillo donde está tu señor.
 
-  Tropas restantes para cambiar de objetivo (%) — Valor predeterminado: 80. Se usa este valor si la personalidad de la IA no define otro.'
-hiding_siege: Objetivo del asedio principal
-hiding_siege_hiding: Castillo refugio
-hiding_siege_home: Castillo original
-hiding_split: Tropas para el segundo castillo (%)
-hiding_switch_alive: Tropas restantes para cambiar de objetivo (%)
-hunt_enabled: Enviar tropas tras el lord
-hunt_enabled_details: Activado por defecto.
-hunt_group: Caza del lord
-hunt_group_details: 'Si el camino está libre, parte del ejército ataca directamente al lord.
+  Predeterminado: 50. Se usa cuando la personalidad de la IA (AIC) no indica un valor propio.
 
+  Cambiar de objetivo en pleno ataque solo si queda esta parte del ejército (%) — Si tu señor entra en un castillo aliado cuando el ataque ya está en marcha, los atacantes solo cambian de objetivo si aún conservan al menos este porcentaje de las tropas con las que salieron. Un ejército medio derrotado sigue atacando su objetivo actual.
 
-  Tropas destinadas a la caza (%) — Valor predeterminado: 50. Se usa este valor si la personalidad de la IA no define otro.'
-hunt_share: Tropas destinadas a la caza (%)
+  Predeterminado: 80. Se usa cuando la personalidad de la IA (AIC) no indica un valor propio.
+hiding_siege: El asedio completo va a
+hiding_siege_hiding: El castillo donde está tu señor
+hiding_siege_home: Tu propio castillo
+hiding_split: Proporción del ejército enviada al otro castillo (%)
+hiding_switch_alive: Cambiar de objetivo en pleno ataque solo si queda esta parte del ejército (%)
+hunt_enabled: Enviar tropas a por el señor
+hunt_enabled_details: |-
+  Los perseguidores son primero las tropas del ejército principal más cercanas a tu señor y después el resto de tropas del ataque. Si mueren todos, el resto de ese ejército va a por el señor. Si el camino vuelve a cerrarse (se repara el muro), los perseguidores regresan al asedio. La IA sigue decidiendo cuándo retirarse exactamente igual que antes.
+
+  Activado por defecto.
+hunt_group: Caza al señor
+hunt_group_details: |-
+  Cuando los atacantes tienen un camino abierto hacia tu señor —por un muro o puerta destruidos, una escalera, una torre de asedio, un túnel derrumbado o porque está al descubierto—, parte de ellos va directamente a por él mientras el resto continúa el asedio.
+
+  Proporción del ejército que caza al señor (%) — Qué porcentaje del ejército que ataca el castillo de tu señor se lanza a por él. Las máquinas de asedio, ingenieros, escaladores y zapadores nunca participan.
+
+  Predeterminado: 50. Se usa cuando la personalidad de la IA (AIC) no indica un valor propio.
+hunt_share: Proporción del ejército que caza al señor (%)
 improvements: Mejoras
 misc: Varios
 tags.behavior: Comportamiento
