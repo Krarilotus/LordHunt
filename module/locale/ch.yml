@@ -1,0 +1,34 @@
+ai: 电脑玩家
+diagnostics_group: 诊断
+diagnostics_group_descr: 在 ucp3.log 中查看诊断信息。
+diagnostics_log: 记录决策
+diagnostics_log_details: 默认关闭。
+hiding_enabled: 攻击避难城堡
+hiding_enabled_details: 默认开启。
+hiding_group: 在盟友城堡避难
+hiding_group_details: '玩家领主躲进盟友城堡时，电脑玩家可转移围攻目标。
+
+
+  主力围攻目标 — 默认值: 避难城堡. 电脑角色没有单独设置时使用此值。
+
+
+  派往第二座城堡的兵力（%） — 默认值: 50. 电脑角色没有单独设置时使用此值。
+
+
+  允许转移目标的最低剩余兵力（%） — 默认值: 80. 电脑角色没有单独设置时使用此值。'
+hiding_siege: 主力围攻目标
+hiding_siege_hiding: 避难城堡
+hiding_siege_home: 原目标城堡
+hiding_split: 派往第二座城堡的兵力（%）
+hiding_switch_alive: 允许转移目标的最低剩余兵力（%）
+hunt_enabled: 派兵追击领主
+hunt_enabled_details: 默认开启。
+hunt_group: 追击领主
+hunt_group_details: '道路畅通时，部分部队直接攻击领主。
+
+
+  追击兵力比例（%） — 默认值: 50. 电脑角色没有单独设置时使用此值。'
+hunt_share: 追击兵力比例（%）
+improvements: 改进
+misc: 其他
+tags.behavior: 行为

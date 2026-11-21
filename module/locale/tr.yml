@@ -1,0 +1,34 @@
+ai: YZ
+diagnostics_group: Tanılama
+diagnostics_group_descr: ucp3.log ile hata ayıklamak için.
+diagnostics_log: Kararları günlüğe yaz
+diagnostics_log_details: Varsayılan olarak kapalı.
+hiding_enabled: Sığınılan kaleye saldır
+hiding_enabled_details: Varsayılan olarak açık.
+hiding_group: Müttefik kalesine sığınma
+hiding_group_details: 'İnsan oyuncunun lordu müttefikine sığınırsa YZ kuşatmayı başka kaleye çevirebilir.
+
+
+  Ana kuşatma hedefi — Varsayılan değer: Sığınılan kale. YZ karakterinde değer yoksa bu değer kullanılır.
+
+
+  İkinci kaleye giden ordu (%) — Varsayılan değer: 50. YZ karakterinde değer yoksa bu değer kullanılır.
+
+
+  Hedef değiştirmek için kalan ordu (%) — Varsayılan değer: 80. YZ karakterinde değer yoksa bu değer kullanılır.'
+hiding_siege: Ana kuşatma hedefi
+hiding_siege_hiding: Sığınılan kale
+hiding_siege_home: Asıl kale
+hiding_split: İkinci kaleye giden ordu (%)
+hiding_switch_alive: Hedef değiştirmek için kalan ordu (%)
+hunt_enabled: Lordun peşine birlik gönder
+hunt_enabled_details: Varsayılan olarak açık.
+hunt_group: Lord avı
+hunt_group_details: 'Yol açıksa ordunun bir kısmı doğrudan lorda saldırır.
+
+
+  Ava gönderilen ordu (%) — Varsayılan değer: 50. YZ karakterinde değer yoksa bu değer kullanılır.'
+hunt_share: Ava gönderilen ordu (%)
+improvements: İyileştirmeler
+misc: Diğer
+tags.behavior: Davranış

@@ -1,53 +1,95 @@
-hiding_group: Lord hiding in an ally's castle
-hiding_group_descr: |
-  When an AI attacks you while your lord sits inside an ally's castle, the AI goes after that
-  castle as well instead of only besieging your empty home.
+ai: AI
+diagnostics_group: Diagnostics
+diagnostics_group_descr: 'For testing.
+
+  '
+diagnostics_log: Write what the attackers decide to the log
+diagnostics_log_details: 'Writes a line to ucp3.log whenever an attack is pointed at another castle, troops split off,
+
+  hunters set out or come back.
+
+
+  Disabled by default.'
 hiding_enabled: Attack the castle your lord hides in
-hiding_enabled_tooltip: |
-  When your lord is outside your own walls and inside the walls of an allied castle the attackers
+hiding_enabled_details: 'When your lord is outside your own walls and inside the walls of an allied castle the attackers
+
   cannot walk into, the attack is pointed at that castle. Part of the army still attacks your
+
   own castle if you have people and buildings there; otherwise the whole army goes for the
+
   castle your lord is in.
-hiding_siege: Full siege goes to
-hiding_siege_tooltip: |
-  The AI can only plan one real siege at a time (siege camps, engineers, ladders, moat
+
+
+  Enabled by default.'
+hiding_group: Lord hiding in an ally's castle
+hiding_group_details: 'When an AI attacks you while your lord sits inside an ally''s castle, the AI goes after that
+
+  castle as well instead of only besieging your empty home.
+
+
+  Full siege goes to — The AI can only plan one real siege at a time (siege camps, engineers, ladders, moat
+
   filling). This picks which castle gets it. The other castle is attacked by the split-off
+
   troops on their own: they go for the nearest building they can reach, then the next one,
+
   and hack at the walls when nothing is in reach. Their archers and crossbowmen walk along and
+
   shoot the troops they meet.
+
+
+  Default: The castle your lord is in. Used when the AI personality does not supply an override.
+
+
+  Share of the army sent to the other castle (%) — How much of the attacking army splits off to attack the castle that does not get the full
+
+  siege. Siege engines, engineers, laddermen and tunnellers always stay with the siege.
+
+  0 sends the whole army to the castle your lord is in.
+
+
+  Default: 50. Used when the AI personality does not supply an override.
+
+
+  Switch mid-attack only with this much of the army left (%) — If your lord slips into an ally''s castle while an attack is already under way, the
+
+  attackers only switch if they still have at least this share of the troops they set out
+
+  with. A half-beaten army keeps attacking what it is attacking.
+
+
+  Default: 80. Used when the AI personality does not supply an override.'
+hiding_siege: Full siege goes to
 hiding_siege_hiding: The castle your lord is in
 hiding_siege_home: Your own castle
 hiding_split: Share of the army sent to the other castle (%)
-hiding_split_tooltip: |
-  How much of the attacking army splits off to attack the castle that does not get the full
-  siege. Siege engines, engineers, laddermen and tunnellers always stay with the siege.
-  0 sends the whole army to the castle your lord is in.
 hiding_switch_alive: Switch mid-attack only with this much of the army left (%)
-hiding_switch_alive_tooltip: |
-  If your lord slips into an ally's castle while an attack is already under way, the
-  attackers only switch if they still have at least this share of the troops they set out
-  with. A half-beaten army keeps attacking what it is attacking.
-
-hunt_group: Lord hunt
-hunt_group_descr: |
-  When the attackers have an open way to your lord - through a broken wall or gate, a ladder,
-  a siege tower or a collapsed tunnel, or because he is out in the open - part of them go
-  straight for him while the rest carry on with the siege.
 hunt_enabled: Send troops after the lord
-hunt_enabled_tooltip: |
-  The hunters are the main army troops closest to your lord first, then the other troops of
+hunt_enabled_details: 'The hunters are the main army troops closest to your lord first, then the other troops of
+
   the attack. If they all die, the rest of that army goes for the lord. If the way to him is
+
   closed again (the wall is repaired), the hunters go back to the siege. The AI still decides
+
   when to retreat, exactly as before.
-hunt_share: Share of the army that hunts the lord (%)
-hunt_share_tooltip: |
-  How much of the army attacking the castle your lord is in goes after him. Siege engines,
+
+
+  Enabled by default.'
+hunt_group: Lord hunt
+hunt_group_details: 'When the attackers have an open way to your lord - through a broken wall or gate, a ladder,
+
+  a siege tower or a collapsed tunnel, or because he is out in the open - part of them go
+
+  straight for him while the rest carry on with the siege.
+
+
+  Share of the army that hunts the lord (%) — How much of the army attacking the castle your lord is in goes after him. Siege engines,
+
   engineers, laddermen and tunnellers never do.
 
-diagnostics_group: Diagnostics
-diagnostics_group_descr: |
-  For testing.
-diagnostics_log: Write what the attackers decide to the log
-diagnostics_log_tooltip: |
-  Writes a line to ucp3.log whenever an attack is pointed at another castle, troops split off,
-  hunters set out or come back.
+
+  Default: 50. Used when the AI personality does not supply an override.'
+hunt_share: Share of the army that hunts the lord (%)
+improvements: Improvements
+misc: Miscellaneous
+tags.behavior: Behavior

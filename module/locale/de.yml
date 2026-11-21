@@ -1,0 +1,34 @@
+ai: KI
+diagnostics_group: Diagnose
+diagnostics_group_descr: Für die Fehlersuche in ucp3.log.
+diagnostics_log: Entscheidungen protokollieren
+diagnostics_log_details: Standardmäßig aus.
+hiding_enabled: Zufluchtsburg angreifen
+hiding_enabled_details: Standardmäßig an.
+hiding_group: Zuflucht in einer verbündeten Burg
+hiding_group_details: 'Versteckt sich ein menschlicher Burgherr bei einem Verbündeten, kann die KI ihre Belagerung verlagern.
+
+
+  Ziel der Hauptbelagerung — Standardwert: Zufluchtsburg. Der Wert gilt, wenn die KI-Persönlichkeit keinen eigenen Wert vorgibt.
+
+
+  Truppen für die zweite Burg (%) — Standardwert: 50. Der Wert gilt, wenn die KI-Persönlichkeit keinen eigenen Wert vorgibt.
+
+
+  Mindeststärke für Zielwechsel (%) — Standardwert: 80. Der Wert gilt, wenn die KI-Persönlichkeit keinen eigenen Wert vorgibt.'
+hiding_siege: Ziel der Hauptbelagerung
+hiding_siege_hiding: Zufluchtsburg
+hiding_siege_home: Ursprüngliche Burg
+hiding_split: Truppen für die zweite Burg (%)
+hiding_switch_alive: Mindeststärke für Zielwechsel (%)
+hunt_enabled: Truppen zur Jagd entsenden
+hunt_enabled_details: Standardmäßig an.
+hunt_group: Jagd auf den Burgherrn
+hunt_group_details: 'Ist der Weg frei, greift ein Teil der Armee den Burgherrn direkt an.
+
+
+  Truppenanteil für die Jagd (%) — Standardwert: 50. Der Wert gilt, wenn die KI-Persönlichkeit keinen eigenen Wert vorgibt.'
+hunt_share: Truppenanteil für die Jagd (%)
+improvements: Verbesserungen
+misc: Sonstiges
+tags.behavior: Verhalten

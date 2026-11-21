@@ -1,0 +1,34 @@
+ai: MI
+diagnostics_group: Diagnosztika
+diagnostics_group_descr: Hibakereséshez az ucp3.log fájlban.
+diagnostics_log: Döntések naplózása
+diagnostics_log_details: Alapértelmezésben ki van kapcsolva.
+hiding_enabled: A menedéket adó vár támadása
+hiding_enabled_details: Alapértelmezésben be van kapcsolva.
+hiding_group: Menedék egy szövetséges várában
+hiding_group_details: 'Ha az emberi várúr egy szövetségeshez menekül, az MI áthelyezheti az ostromot.
+
+
+  A fő ostrom célpontja — Alapérték: Menedéket adó vár. Ez az érték érvényes, ha az MI személyisége nem ad meg másikat.
+
+
+  Csapatok a második várhoz (%) — Alapérték: 50. Ez az érték érvényes, ha az MI személyisége nem ad meg másikat.
+
+
+  Célváltáshoz megmaradó haderő (%) — Alapérték: 80. Ez az érték érvényes, ha az MI személyisége nem ad meg másikat.'
+hiding_siege: A fő ostrom célpontja
+hiding_siege_hiding: Menedéket adó vár
+hiding_siege_home: Eredeti vár
+hiding_split: Csapatok a második várhoz (%)
+hiding_switch_alive: Célváltáshoz megmaradó haderő (%)
+hunt_enabled: Csapatok küldése a várúr után
+hunt_enabled_details: Alapértelmezésben be van kapcsolva.
+hunt_group: Várúrvadászat
+hunt_group_details: 'Ha szabad az út, a sereg egy része közvetlenül a várurat támadja.
+
+
+  A vadászatra küldött sereg aránya (%) — Alapérték: 50. Ez az érték érvényes, ha az MI személyisége nem ad meg másikat.'
+hunt_share: A vadászatra küldött sereg aránya (%)
+improvements: Fejlesztések
+misc: Egyéb
+tags.behavior: Viselkedés
