@@ -18,6 +18,7 @@ options:
   - url: lord-hunt.hiding.siege
     name: lord-hunt-hiding-siege
     text: '{{hiding_siege}}'
+    tooltip: '{{hiding_siege_tooltip}}'
     display: Choice
     contents:
       type: string
@@ -30,6 +31,7 @@ options:
   - url: lord-hunt.hiding.split
     name: lord-hunt-hiding-split
     text: '{{hiding_split}}'
+    tooltip: '{{hiding_split_tooltip}}'
     display: Number
     contents:
       type: integer
@@ -40,6 +42,7 @@ options:
   - url: lord-hunt.hiding.switch_alive
     name: lord-hunt-hiding-switch-alive
     text: '{{hiding_switch_alive}}'
+    tooltip: '{{hiding_switch_alive_tooltip}}'
     display: Number
     contents:
       type: integer
@@ -66,6 +69,7 @@ options:
   - url: lord-hunt.hunt.share
     name: lord-hunt-hunt-share
     text: '{{hunt_share}}'
+    tooltip: '{{hunt_share_tooltip}}'
     display: Number
     contents:
       type: integer

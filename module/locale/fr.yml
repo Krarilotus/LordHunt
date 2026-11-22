@@ -2,48 +2,37 @@ ai: IA
 diagnostics_group: Diagnostic
 diagnostics_group_descr: Pour les tests et le dépannage.
 diagnostics_log: Journaliser les décisions des attaquants
-diagnostics_log_details: |-
-  Écrit une ligne dans ucp3.log chaque fois qu'une attaque est redirigée vers un autre château, que des troupes se séparent ou que les chasseurs partent ou reviennent.
-
-  Désactivé par défaut.
+diagnostics_log_details: Écrit une ligne dans ucp3.log chaque fois qu'une attaque est redirigée vers un autre château, que des troupes se séparent ou que les chasseurs partent ou reviennent.
 hiding_enabled: Attaquer le château où votre seigneur se cache
-hiding_enabled_details: |-
-  Lorsque votre seigneur se trouve hors de vos propres murs et à l'intérieur des murs d'un château allié où les attaquants ne peuvent pas entrer à pied, l'attaque est dirigée vers ce château. Une partie de l'armée attaque tout de même votre château s'il contient encore des habitants et des bâtiments ; sinon, toute l'armée marche sur le château où se trouve votre seigneur.
-
-  Activé par défaut.
+hiding_enabled_details: Lorsque votre seigneur se trouve hors de vos propres murs et à l'intérieur des murs d'un château allié où les attaquants ne peuvent pas entrer à pied, l'attaque est dirigée vers ce château. Une partie de l'armée attaque tout de même votre château s'il contient encore des habitants et des bâtiments ; sinon, toute l'armée marche sur le château où se trouve votre seigneur.
 hiding_group: Seigneur caché dans un château allié
-hiding_group_details: |-
-  Lorsqu'une IA vous attaque alors que votre seigneur se réfugie dans un château allié, l'IA s'en prend aussi à ce château au lieu d'assiéger uniquement votre château vide.
-
-  Le siège complet vise — L'IA ne peut planifier qu'un seul vrai siège à la fois (tentes de siège, ingénieurs, échelles, comblement des douves). Cette option choisit quel château le subit. L'autre château est attaqué seul par les troupes détachées : elles visent le bâtiment accessible le plus proche, puis le suivant, et frappent les murs quand rien n'est accessible. Leurs archers et arbalétriers les accompagnent et tirent sur les troupes rencontrées.
-
-  Par défaut : Le château où se trouve votre seigneur. Utilisé lorsque la personnalité de l'IA (AIC) ne définit pas de valeur propre.
-
-  Part de l'armée envoyée vers l'autre château (%) — Part de l'armée d'attaque qui se sépare pour attaquer le château ne recevant pas le siège complet. Les engins de siège, ingénieurs, écheliers et tunneliers restent toujours avec le siège. 0 envoie toute l'armée vers le château où se trouve votre seigneur.
-
-  Par défaut : 50. Utilisé lorsque la personnalité de l'IA (AIC) ne définit pas de valeur propre.
-
-  Changer de cible en cours d'attaque seulement s'il reste au moins cette part de l'armée (%) — Si votre seigneur se réfugie dans un château allié alors qu'une attaque est déjà en cours, les attaquants ne changent de cible que s'il leur reste au moins cette proportion de leurs troupes de départ. Une armée déjà à moitié décimée poursuit son attaque actuelle.
-
-  Par défaut : 80. Utilisé lorsque la personnalité de l'IA (AIC) ne définit pas de valeur propre.
+hiding_group_details: Lorsqu'une IA vous attaque alors que votre seigneur se réfugie dans un château allié, l'IA s'en prend aussi à ce château au lieu d'assiéger uniquement votre château vide.
 hiding_siege: Le siège complet vise
 hiding_siege_hiding: Le château où se trouve votre seigneur
 hiding_siege_home: Votre propre château
+hiding_siege_tooltip: |-
+  L'IA ne peut planifier qu'un seul vrai siège à la fois (tentes de siège, ingénieurs, échelles, comblement des douves). Cette option choisit quel château le subit. L'autre château est attaqué seul par les troupes détachées : elles visent le bâtiment accessible le plus proche, puis le suivant, et frappent les murs quand rien n'est accessible. Leurs archers et arbalétriers les accompagnent et tirent sur les troupes rencontrées.
+
+  Utilisé lorsque la personnalité de l'IA (AIC) ne définit pas de valeur propre.
 hiding_split: Part de l'armée envoyée vers l'autre château (%)
+hiding_split_tooltip: |-
+  Part de l'armée d'attaque qui se sépare pour attaquer le château ne recevant pas le siège complet. Les engins de siège, ingénieurs, écheliers et tunneliers restent toujours avec le siège. 0 envoie toute l'armée vers le château où se trouve votre seigneur.
+
+  Utilisé lorsque la personnalité de l'IA (AIC) ne définit pas de valeur propre.
 hiding_switch_alive: Changer de cible en cours d'attaque seulement s'il reste au moins cette part de l'armée (%)
+hiding_switch_alive_tooltip: |-
+  Si votre seigneur se réfugie dans un château allié alors qu'une attaque est déjà en cours, les attaquants ne changent de cible que s'il leur reste au moins cette proportion de leurs troupes de départ. Une armée déjà à moitié décimée poursuit son attaque actuelle.
+
+  Utilisé lorsque la personnalité de l'IA (AIC) ne définit pas de valeur propre.
 hunt_enabled: Envoyer des troupes chasser le seigneur
-hunt_enabled_details: |-
-  Les chasseurs sont d'abord les troupes de l'armée principale les plus proches de votre seigneur, puis les autres troupes de l'attaque. S'ils meurent tous, le reste de cette armée fonce sur le seigneur. Si le passage est refermé (mur réparé), les chasseurs retournent au siège. L'IA décide toujours du repli exactement comme avant.
-
-  Activé par défaut.
+hunt_enabled_details: Les chasseurs sont d'abord les troupes de l'armée principale les plus proches de votre seigneur, puis les autres troupes de l'attaque. S'ils meurent tous, le reste de cette armée fonce sur le seigneur. Si le passage est refermé (mur réparé), les chasseurs retournent au siège. L'IA décide toujours du repli exactement comme avant.
 hunt_group: Chasse au seigneur
-hunt_group_details: |-
-  Dès que les attaquants disposent d'un passage ouvert vers votre seigneur — par un mur ou une porte détruits, une échelle, une tour de siège, un tunnel effondré ou parce qu'il est à découvert — une partie d'entre eux fonce directement sur lui pendant que le reste poursuit le siège.
-
-  Part de l'armée qui chasse le seigneur (%) — Part de l'armée attaquant le château de votre seigneur qui se lance à sa poursuite. Les engins de siège, ingénieurs, écheliers et tunneliers n'y participent jamais.
-
-  Par défaut : 50. Utilisé lorsque la personnalité de l'IA (AIC) ne définit pas de valeur propre.
+hunt_group_details: Dès que les attaquants disposent d'un passage ouvert vers votre seigneur — par un mur ou une porte détruits, une échelle, une tour de siège, un tunnel effondré ou parce qu'il est à découvert — une partie d'entre eux fonce directement sur lui pendant que le reste poursuit le siège.
 hunt_share: Part de l'armée qui chasse le seigneur (%)
+hunt_share_tooltip: |-
+  Part de l'armée attaquant le château de votre seigneur qui se lance à sa poursuite. Les engins de siège, ingénieurs, écheliers et tunneliers n'y participent jamais.
+
+  Utilisé lorsque la personnalité de l'IA (AIC) ne définit pas de valeur propre.
 improvements: Améliorations
 misc: Divers
 tags.behavior: Comportement
