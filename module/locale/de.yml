@@ -11,7 +11,7 @@ hiding_siege: Ziel der vollen Belagerung
 hiding_siege_hiding: Die Burg, in der dein Lord ist
 hiding_siege_home: Deine eigene Burg
 hiding_siege_tooltip: |-
-  Die KI kann immer nur eine vollständige Belagerung gleichzeitig planen (Belagerungslager, Baumeister, Leitern, Grabenausheben). Hier wird festgelegt, welche Burg sie trifft. Die andere Burg wird von den abgespaltenen Truppen auf eigene Faust angegriffen: Sie greifen das nächste erreichbare Gebäude an, dann das übernächste, und schlagen auf Mauern ein, wenn nichts anderes erreichbar ist. Ihre Bogenschützen und Armbrustschützen ziehen mit und schießen auf gegnerische Truppen unterwegs.
+  Die KI kann immer nur eine vollständige Belagerung gleichzeitig planen (Belagerungslager, Baumeister, Leitern, Zuschütten von Burggräben). Hier wird festgelegt, welche Burg sie trifft. Die andere Burg wird von den abgespaltenen Truppen auf eigene Faust angegriffen.
 
   Gilt, wenn die KI-Persönlichkeit (AIC) keinen eigenen Wert vorgibt.
 hiding_split: Anteil der Armee für die andere Burg (%)

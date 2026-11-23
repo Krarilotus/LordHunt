@@ -11,7 +11,7 @@ hiding_siege: El asedio completo va a
 hiding_siege_hiding: El castillo donde está tu señor
 hiding_siege_home: Tu propio castillo
 hiding_siege_tooltip: |-
-  La IA solo puede planificar un asedio completo a la vez (campamentos de asedio, ingenieros, escaleras, relleno de fosos). Esto elige qué castillo lo recibe. El otro castillo es atacado por las tropas separadas por su cuenta: atacan el edificio alcanzable más cercano, luego el siguiente, y golpean los muros si no hay ninguno al alcance. Sus arqueros y ballesteros avanzan con ellas y disparan a las tropas que encuentran.
+  La IA solo puede planificar un asedio completo a la vez (campamentos de asedio, ingenieros, escaleras, relleno de fosos). Esto elige qué castillo lo recibe. El otro castillo es atacado por las tropas separadas por su cuenta.
 
   Se usa cuando la personalidad de la IA (AIC) no indica un valor propio.
 hiding_split: Proporción del ejército enviada al otro castillo (%)

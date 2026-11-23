@@ -11,7 +11,7 @@ hiding_siege: A teljes ostrom célpontja
 hiding_siege_hiding: A vár, amelyben a lordod van
 hiding_siege_home: A saját várad
 hiding_siege_tooltip: |-
-  Az MI egyszerre csak egy teljes ostromot tud megtervezni (ostromsátrak, mérnökök, létrák, árokbetemetés). Itt választható ki, melyik vár kapja ezt. A másik várat a leváló csapatok önállóan támadják: a legközelebbi elérhető épületet rombolják, majd a következőt, és ha semmi nem elérhető, a falakat támadják. Az íjászaik és számszeríjászaik velük mennek, és a szembejövő csapatokra lőnek.
+  Az MI egyszerre csak egy teljes ostromot tud megtervezni (ostromsátrak, mérnökök, létrák, árokbetemetés). Itt választható ki, melyik vár kapja ezt. A másik várat a leváló csapatok önállóan támadják.
 
   Akkor érvényes, ha az MI személyisége (AIC) nem ad meg saját értéket.
 hiding_split: A másik vár ellen küldött sereg aránya (%)

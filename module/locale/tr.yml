@@ -11,7 +11,7 @@ hiding_siege: Tam kuşatma hedefi
 hiding_siege_hiding: Lordunun bulunduğu kale
 hiding_siege_home: Kendi kalen
 hiding_siege_tooltip: |-
-  Yapay zekâ aynı anda yalnızca bir tam kuşatma planlayabilir (kuşatma çadırları, mühendisler, merdivenler, hendek doldurma). Bu ayar hangi kalenin tam kuşatma alacağını seçer. Diğer kaleye ayrılan birlikler kendi başına saldırır: ulaşabildikleri en yakın binayı, sonra bir sonrakini yıkarlar; ulaşacak bina kalmayınca surlara vururlar. Okçuları ve arbaletçileri de yanlarında yürüyüp karşılaştıkları birliklere ateş eder.
+  Yapay zekâ aynı anda yalnızca bir tam kuşatma planlayabilir (kuşatma çadırları, mühendisler, merdivenler, hendek doldurma). Bu ayar hangi kalenin tam kuşatma alacağını seçer. Diğer kaleye ayrılan birlikler kendi başına saldırır.
 
   Yapay zekâ kişiliği (AIC) kendi değerini belirtmediğinde kullanılır.
 hiding_split: Diğer kaleye gönderilen ordu payı (%)

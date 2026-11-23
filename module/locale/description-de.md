@@ -11,7 +11,7 @@ Normalerweise greift eine KI immer nur deinen eigenen Bergfried an. Sitzt dein L
 
 Mit diesem Modul gilt, sobald dein Lord außerhalb deiner eigenen Mauern und innerhalb der Mauern eines Verbündeten steht, in die die Angreifer nicht einfach hineinmarschieren können:
 
-- **Du hast zu Hause noch Leute und Gebäude:** Die Armee teilt sich auf. Standardmäßig geht die volle Belagerung (Belagerungslager, Baumeister, Leitern, Grabenausheben) gegen die Burg, in der dein Lord sitzt, während die halbe Armee auf eigene Faust deine eigene Burg angreift. Du kannst vertauschen, welche Burg die volle Belagerung abbekommt, und den Anteil anpassen.
+- **Du hast zu Hause noch Leute und Gebäude:** Die Armee teilt sich auf. Standardmäßig geht die volle Belagerung (Belagerungslager, Baumeister, Leitern, Zuschütten von Burggräben) gegen die Burg, in der dein Lord sitzt, während die halbe Armee auf eigene Faust deine eigene Burg angreift. Du kannst vertauschen, welche Burg die volle Belagerung abbekommt, und den Anteil anpassen.
 - **Deine Burg ist leer:** Die gesamte Armee zieht gegen die Burg, in der sich dein Lord aufhält.
 - **Dein Lord flieht während eines bereits laufenden Angriffs dorthin:** Die Angreifer schwenken nur um, wenn noch der Großteil ihrer Armee lebt (standardmäßig 80 %).
 

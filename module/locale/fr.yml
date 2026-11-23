@@ -11,7 +11,7 @@ hiding_siege: Le siège complet vise
 hiding_siege_hiding: Le château où se trouve votre seigneur
 hiding_siege_home: Votre propre château
 hiding_siege_tooltip: |-
-  L'IA ne peut planifier qu'un seul vrai siège à la fois (tentes de siège, ingénieurs, échelles, comblement des douves). Cette option choisit quel château le subit. L'autre château est attaqué seul par les troupes détachées : elles visent le bâtiment accessible le plus proche, puis le suivant, et frappent les murs quand rien n'est accessible. Leurs archers et arbalétriers les accompagnent et tirent sur les troupes rencontrées.
+  L'IA ne peut planifier qu'un seul vrai siège à la fois (tentes de siège, ingénieurs, échelles, comblement des douves). Cette option choisit quel château le subit. L'autre château est attaqué seul par les troupes détachées.
 
   Utilisé lorsque la personnalité de l'IA (AIC) ne définit pas de valeur propre.
 hiding_split: Part de l'armée envoyée vers l'autre château (%)

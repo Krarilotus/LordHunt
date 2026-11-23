@@ -22,15 +22,7 @@ hiding_group_details: 'When an AI attacks you while your lord sits inside an all
 hiding_siege: Full siege goes to
 hiding_siege_hiding: The castle your lord is in
 hiding_siege_home: Your own castle
-hiding_siege_tooltip: 'The AI can only plan one real siege at a time (siege camps, engineers, ladders, moat
-
-  filling). This picks which castle gets it. The other castle is attacked by the split-off
-
-  troops on their own: they go for the nearest building they can reach, then the next one,
-
-  and hack at the walls when nothing is in reach. Their archers and crossbowmen walk along and
-
-  shoot the troops they meet.
+hiding_siege_tooltip: 'The AI can only plan one real siege at a time (siege camps, engineers, ladders, moat filling). This picks which castle gets it. The other castle is attacked by the split-off troops on their own.
 
 
   Used when the AI personality does not supply an override.'
